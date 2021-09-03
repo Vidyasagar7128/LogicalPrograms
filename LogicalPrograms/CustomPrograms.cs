@@ -6,19 +6,14 @@ namespace LogicalPrograms
 {
     class CustomPrograms
     {
-        public static void dayOfWeeks(String day,String month,String year)
+        public static void temperaturConversion()
         {
-            int d = int.Parse(day);
-            int m = int.Parse(month);
-            int y = int.Parse(year);
-            int y0 = y - (14 - m) / 12;
-            Console.WriteLine($"y0 = y - (14 - m) / 12 : {y - (14 - m) / 12}");
-            int x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
-            Console.WriteLine($"y0 + y0 / 4 - y0 / 100 + y0 / 400 :{x}");
-            int m0 = m + 12 * ((14 - m) / 12) - 2;
-            Console.WriteLine($"m + 12 * ((14 - m) / 12) - 2 :{m0}");
-            int d0 = (d + x + 31 * m0 / 12) % 7;
-            Console.WriteLine($"(d + x + 31 * m0 / 12) % 7 : {d0}");
+            int f = int.Parse(Console.ReadLine());
+            double cel = (f - 32) * 5 / 9;
+            Console.WriteLine($"Fahrenheit to Celsius : {cel}");
+            double fer = (f * 9 / 5) + 32;
+            Console.WriteLine($"Celsius to Fahrenheit : {fer}");
+
         }
     }
 }
