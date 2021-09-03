@@ -6,26 +6,18 @@ namespace LogicalPrograms
 {
     class CustomPrograms
     {
-        int count = 0;
+        int reminder=0;
+        int rev = 0;
         int number = int.Parse(Console.ReadLine());
-        public void primeNumber()
+        public void reversNumber()
         {
-            for (int i = 1; i <= this.number; i++)
+            while (this.number != 0)
             {
-                if (this.number % i == 0)
-                {
-                    this.count = this.count + 1;
-                }
+                this.reminder = this.number % 10;
+                this.rev = this.rev * 10 + this.reminder;
+                this.number = this.number / 10;
             }
-            if (this.count == 2)
-            {
-                Console.WriteLine($"{number} : Number is Prime..");
-            }
-            else
-            {
-                Console.WriteLine($"{number} : Number is not Prime..");
-            }
-            
+            Console.WriteLine($"{this.rev}");
         }
     }
 }
