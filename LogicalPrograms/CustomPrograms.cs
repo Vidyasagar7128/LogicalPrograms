@@ -6,18 +6,19 @@ namespace LogicalPrograms
 {
     class CustomPrograms
     {
-        int reminder=0;
-        int rev = 0;
-        int number = int.Parse(Console.ReadLine());
-        public void reversNumber()
+        public void dayOfWeeks(String day,String month,String year)
         {
-            while (this.number != 0)
-            {
-                this.reminder = this.number % 10;
-                this.rev = this.rev * 10 + this.reminder;
-                this.number = this.number / 10;
-            }
-            Console.WriteLine($"{this.rev}");
+            int d = int.Parse(day);
+            int m = int.Parse(month);
+            int y = int.Parse(year);
+            int y0 = y - (14 - m) / 12;
+            Console.WriteLine($"y0 = y - (14 - m) / 12 : {y - (14 - m) / 12}");
+            int x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
+            Console.WriteLine($"y0 + y0 / 4 - y0 / 100 + y0 / 400 :{x}");
+            int m0 = m + 12 * ((14 - m) / 12) - 2;
+            Console.WriteLine($"m + 12 * ((14 - m) / 12) - 2 :{m0}");
+            int d0 = (d + x + 31 * m0 / 12) % 7;
+            Console.WriteLine($"(d + x + 31 * m0 / 12) % 7 : {d0}");
         }
     }
 }

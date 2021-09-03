@@ -8,7 +8,7 @@ namespace LogicalPrograms
         {
             Console.WriteLine("Enter Number : ");
             CustomPrograms obj = new CustomPrograms();
-            obj.reversNumber();
+            obj.dayOfWeeks(args[0],args[1],args[2]);
         }
     }
 }
