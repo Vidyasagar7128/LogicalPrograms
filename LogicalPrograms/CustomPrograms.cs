@@ -6,7 +6,7 @@ namespace LogicalPrograms
 {
     class CustomPrograms
     {
-        public void dayOfWeeks(String day,String month,String year)
+        public static void dayOfWeeks(String day,String month,String year)
         {
             int d = int.Parse(day);
             int m = int.Parse(month);

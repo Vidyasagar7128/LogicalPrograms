@@ -7,8 +7,8 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
             Console.WriteLine("Enter Number : ");
-            CustomPrograms obj = new CustomPrograms();
-            obj.dayOfWeeks(args[0],args[1],args[2]);
+            CustomPrograms.dayOfWeeks(args[0],args[1],args[2]);
+            
         }
     }
 }
