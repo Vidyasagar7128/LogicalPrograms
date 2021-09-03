@@ -6,9 +6,10 @@ namespace LogicalPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Fibonacci Series");
+            Console.WriteLine("Perfect Number Program");
+            Console.WriteLine("Enter Number : ");
             CustomPrograms obj = new CustomPrograms();
-            obj.fibonacci();
+            obj.perfectNumber();
         }
     }
 }

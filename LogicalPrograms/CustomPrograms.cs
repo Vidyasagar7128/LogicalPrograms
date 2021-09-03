@@ -7,15 +7,25 @@ namespace LogicalPrograms
     class CustomPrograms
     {
         int sum = 0;
-        public void fibonacci()
+        int number = int.Parse(Console.ReadLine());
+        public void perfectNumber()
         {
-            Console.WriteLine("Enter Number : ");
-            int number = int.Parse(Console.ReadLine());
-
-            for (int i = 1; i <= number; i++)
+            for (int i = 1; i < this.number; i++)
             {
-                this.sum = this.sum + i;
-                Console.WriteLine(this.sum);
+                if (this.number % i == 0)//1,2,3,4
+                {
+                    this.sum = this.sum + i;
+                    Console.WriteLine(i);
+                }
+            }
+            Console.WriteLine($"Addition : {this.sum}");
+            if(this.number == this.sum)
+            {
+                Console.WriteLine($"{this.number} : is Perfect Number");
+            }
+            else
+            {
+                Console.WriteLine($"{this.number} : is Not Perfect Number");
             }
         }
     }
