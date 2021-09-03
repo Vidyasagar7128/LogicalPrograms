@@ -6,7 +6,9 @@ namespace LogicalPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Logical Programs");
+            Console.WriteLine("Fibonacci Series");
+            CustomPrograms obj = new CustomPrograms();
+            obj.fibonacci();
         }
     }
 }
