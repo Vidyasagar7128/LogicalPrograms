@@ -9,7 +9,7 @@ namespace LogicalPrograms
             Console.WriteLine("Perfect Number Program");
             Console.WriteLine("Enter Number : ");
             CustomPrograms obj = new CustomPrograms();
-            obj.perfectNumber();
+            obj.primeNumber();
         }
     }
 }

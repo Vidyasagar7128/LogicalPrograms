@@ -6,27 +6,26 @@ namespace LogicalPrograms
 {
     class CustomPrograms
     {
-        int sum = 0;
+        int count = 0;
         int number = int.Parse(Console.ReadLine());
-        public void perfectNumber()
+        public void primeNumber()
         {
-            for (int i = 1; i < this.number; i++)
+            for (int i = 1; i <= this.number; i++)
             {
-                if (this.number % i == 0)//1,2,3,4
+                if (this.number % i == 0)
                 {
-                    this.sum = this.sum + i;
-                    Console.WriteLine(i);
+                    this.count = this.count + 1;
                 }
             }
-            Console.WriteLine($"Addition : {this.sum}");
-            if(this.number == this.sum)
+            if (this.count == 2)
             {
-                Console.WriteLine($"{this.number} : is Perfect Number");
+                Console.WriteLine($"{number} : Number is Prime..");
             }
             else
             {
-                Console.WriteLine($"{this.number} : is Not Perfect Number");
+                Console.WriteLine($"{number} : Number is not Prime..");
             }
+            
         }
     }
 }
