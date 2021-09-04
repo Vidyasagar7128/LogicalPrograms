@@ -7,7 +7,7 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
             Console.WriteLine("Enter Number : ");
-            CustomPrograms.temperaturConversion();
+            CustomPrograms.Coupons();
             
         }
     }

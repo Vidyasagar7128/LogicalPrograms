@@ -6,14 +6,20 @@ namespace LogicalPrograms
 {
     class CustomPrograms
     {
-        public static void temperaturConversion()
+        public static void Coupons()
         {
-            int f = int.Parse(Console.ReadLine());
-            double cel = (f - 32) * 5 / 9;
-            Console.WriteLine($"Fahrenheit to Celsius : {cel}");
-            double fer = (f * 9 / 5) + 32;
-            Console.WriteLine($"Celsius to Fahrenheit : {fer}");
+            HashSet<int> odd = new HashSet<int>();
+            int num = int.Parse(Console.ReadLine());
 
+            for (int i = 0; i < num; i++)
+            {
+                int rand = new Random().Next(10000, 99999);
+                odd.Add(rand);
+            }
+            foreach (int i in odd)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
