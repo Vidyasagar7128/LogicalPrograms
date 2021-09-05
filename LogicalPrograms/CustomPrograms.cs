@@ -32,7 +32,7 @@ namespace LogicalPrograms
                 String finalString = String.Concat(swap2, swap1);
                 this.result = (int)Convert.ToInt32(finalString, 2);
                 Console.WriteLine($"Magic : {this.result}");
-            if(this.odd[odd.Count - 1] == result)
+            if(this.odd[odd.Count - 1] == this.result)
             {
                 Console.WriteLine($"{this.result} : is Power of 2");
             }
