@@ -7,12 +7,7 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
             Console.WriteLine("Enter Number : ");
-            CustomPrograms customPrograms = new CustomPrograms();
-            customPrograms.Watch();
-            customPrograms.start();
-            customPrograms.elapsedTime();
-
-
+            CustomPrograms.dayOfWeeks(args[0],args[1],args[2]);
         }
     }
 }
