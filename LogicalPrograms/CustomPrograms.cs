@@ -6,19 +6,39 @@ namespace LogicalPrograms
 {
     class CustomPrograms
     {
-        public static void Coupons()
+        int var = -1, rem, binary = 0, i = 1,check=0,result=0;
+        String strNum = "";
+        List<int> odd = new List<int>();
+        public void toBinary()
         {
-            HashSet<int> odd = new HashSet<int>();
-            int num = int.Parse(Console.ReadLine());
-
-            for (int i = 0; i < num; i++)
+            int number = int.Parse(Console.ReadLine());
+            int num= number;
+            while (num != 0)
             {
-                int rand = new Random().Next(10000, 99999);
-                odd.Add(rand);
+                rem = num % 2;
+                num = num / 2;
+                binary = binary + (rem * i);
+                i = i * 10;
+                var++;
+                this.check = (int)Math.Pow(2, var);
+                this.odd.Add(this.check);
+                Console.WriteLine(this.check);
             }
-            foreach (int i in odd)
+                Console.WriteLine($"Binary : {binary.ToString()}");
+                this.strNum = binary.ToString();
+                int len = strNum.Length / 2;
+                String swap1 = strNum.Substring(0, len);
+                String swap2 = strNum.Substring(len);
+                String finalString = String.Concat(swap2, swap1);
+                this.result = (int)Convert.ToInt32(finalString, 2);
+                Console.WriteLine($"Magic : {this.result}");
+            if(this.odd[odd.Count - 1] == result)
             {
-                Console.WriteLine(i);
+                Console.WriteLine($"{this.result} : is Power of 2");
+            }
+            else
+            {
+                Console.WriteLine($"{this.result} : is Not Power of 2");
             }
         }
     }

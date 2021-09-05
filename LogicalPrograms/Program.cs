@@ -7,7 +7,8 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
             Console.WriteLine("Enter Number : ");
-            CustomPrograms.Coupons();
+            CustomPrograms customPrograms = new CustomPrograms();
+            customPrograms.toBinary();
             
         }
     }
