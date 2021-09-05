@@ -8,8 +8,11 @@ namespace LogicalPrograms
         {
             Console.WriteLine("Enter Number : ");
             CustomPrograms customPrograms = new CustomPrograms();
-            customPrograms.toBinary();
-            
+            customPrograms.Watch();
+            customPrograms.start();
+            customPrograms.elapsedTime();
+
+
         }
     }
 }
