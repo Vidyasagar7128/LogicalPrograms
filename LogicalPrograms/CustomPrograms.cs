@@ -6,24 +6,25 @@ using System.Diagnostics;
 
 namespace LogicalPrograms
 {
-    class CustomPrograms
-    {
-       public double squareRoot(double n, double l)
+	class CustomPrograms
+	{
+		List<int> notes = new List<int>{1000, 500, 100, 50, 10, 5, 2, 1};
+		int i = 0;
+       public void vendingMachine()
         {
-            double x = n;
-            double root;
-            int count = 0;
-            while (true)
-            {
-                count++;
-
-                root = 0.5 * (x + (n / x));
-
-                if (Math.Abs(root - x) < l)
-                    break;
-                x = root;
-            }
-            return root;
-        }
+			int money = int.Parse(Console.ReadLine());
+			int rem;
+			while (money != 0)
+			{
+				if (money >= this.notes[this.i])
+				{
+					int calNotes = money / this.notes[this.i];
+					rem = money % this.notes[this.i];
+					money = rem;
+					Console.WriteLine($"{this.notes[this.i]} Notes ::::: {calNotes} ");
+				}
+				i++;
+			}
+		}
     }
 }
