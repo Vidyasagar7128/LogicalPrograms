@@ -6,8 +6,8 @@ namespace LogicalPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter Number to Convert to Binary : ");
-            CustomPrograms.decimalToBinary();
+            Console.WriteLine("Monthly Payment : ");
+            CustomPrograms.monthlyPayment(args[0],args[1],args[2]);
         }
     }
 }

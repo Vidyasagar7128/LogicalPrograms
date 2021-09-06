@@ -8,20 +8,15 @@ namespace LogicalPrograms
 {
 	class CustomPrograms
 	{
-       public static void decimalToBinary()
-        {
-            int var = -1, rem, binary = 0, i = 1;
-            int num = int.Parse(Console.ReadLine());
-            while (num != 0)
-            {  
-                rem = num % 2;
-                num = num / 2;
-                binary = binary + (rem * i);
-                i = i * 10;
-                var++;
-                Console.WriteLine(Math.Pow(2, var));
-            }
-            Console.WriteLine(binary);
-        }
+       public static void monthlyPayment(String principal,String rate,String year)
+       {
+            double P = double.Parse(principal);
+            double R = double.Parse(rate);
+            int Y = int.Parse(year);
+            int n = 12*Y;
+            double r = R / (12 * 100);
+            double payment = P * r / 1 - Math.Pow((1+r),-n);
+            Console.WriteLine(payment);
+       }
     }
 }
